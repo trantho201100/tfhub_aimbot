@@ -12,7 +12,7 @@ size_scale = 3
 
 while True:
     # Get rect of Window
-    hwnd = win32gui.FindWindow(None, 'Counter-Strike: Global Offensive')
+    hwnd = win32gui.FindWindow(None, 'GTA5VN')
     #hwnd = win32gui.FindWindow("UnrealWindow", None) # Fortnite
     rect = win32gui.GetWindowRect(hwnd)
     region = rect[0], rect[1], rect[2] - rect[0], rect[3] - rect[1]
@@ -71,7 +71,7 @@ while True:
         win32api.mouse_event(win32con.MOUSEEVENTF_MOVE, x, y, 0, 0)
         time.sleep(0.05)
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
-        time.sleep(0.1)
+        time.sleep(1)
         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
 
     #ori_img = cv2.cvtColor(ori_img, cv2.COLOR_BGR2RGB)
